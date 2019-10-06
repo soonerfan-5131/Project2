@@ -23,4 +23,14 @@ public class PosAvg {
 		}
 		return statIndex;
 	}
+	//toString method.  Finish later
+	public String toString() {
+		String city = file.get(indexOfStation() + 1);
+		
+		String city2 = file.get(indexOfStation() - 1);
+		
+		String city3 = file.get(indexOfStation() + 2);
+		
+		return city;//stub
+	}
 }
