@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class PosAvg {
 	private String str;
+	private String temp;
 	ArrayList<String> file = new ArrayList<String>();
 	//Default constructor
 	public PosAvg() {
@@ -13,7 +14,6 @@ public class PosAvg {
 	}
 	//Find the index of the station
 	public int indexOfStation() {
-		String temp = "";
 		int statIndex = 0;
 		for(int i = 0; i < file.size(); i++) {
 			temp = file.get(i);
