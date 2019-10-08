@@ -1,3 +1,8 @@
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class PosAvg {
@@ -11,6 +16,20 @@ public class PosAvg {
 	//PosAvg constructor
 	public PosAvg(String str) {
 		this.str = str;
+	}
+	//Read method to read in Mesonet.txt
+	public void readFile(String fileName) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new FileReader("Mesonet.txt"));
+		
+		//Skip first three lines
+		for(int i = 1; i <= 3; i++) {
+			br.readLine();
+		}
+		String fileLine = br.readLine();
+		while(fileLine != null) {
+			
+		}
 	}
 	//Find the index of the station
 	public int indexOfStation() {

@@ -1,4 +1,5 @@
 
+
 public class MesoInherit extends MesoAbstract{
 	private String statID;
 	//Default constructor

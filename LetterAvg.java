@@ -1,4 +1,5 @@
 
+
 public class LetterAvg {
 	private char avgLetter;
 	//Default constructor
@@ -12,5 +13,9 @@ public class LetterAvg {
 	//number of stations with letter average method
 	public int numberOfStationWithLetterAvg() {
 		return 0;//stub
+	}
+	//toString method
+	public String toString() {
+		return null;//stub
 	}
 }
