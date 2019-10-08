@@ -56,7 +56,7 @@ public class PosAvg {
 		
 		String city4 = file.get(indexOfStation() - 2);
 		
-		return String.format("This index is average of %s and %s, %s and %s, and so on.", city, city2, city3, city4);//stub
+		return String.format("This index is average of %s and %s, %s and %s, and so on.", city, city2, city3, city4);
 	}
 	public ArrayList<String> getFile() {
 		return file;

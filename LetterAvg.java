@@ -2,8 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LetterAvg {
+	ArrayList<String> file = new ArrayList<String>();
+	PosAvg p = new PosAvg();
 	private char avgLetter;
 	//Default constructor
 	public LetterAvg() {
@@ -18,7 +21,7 @@ public class LetterAvg {
 		String fileLine;
 		String parse = "";
 		BufferedReader br = new BufferedReader(new FileReader("Mesonet.txt"));
-		
+		file = p.getFile();
 		//Skip first three lines
 		for(int i = 0; i < 3; i++) {
 			br.readLine();
