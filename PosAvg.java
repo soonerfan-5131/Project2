@@ -19,17 +19,21 @@ public class PosAvg {
 	}
 	//Read method to read in Mesonet.txt
 	public void readFile(String fileName) throws IOException {
-		
+		String fileLine;
+		String parse = "";
 		BufferedReader br = new BufferedReader(new FileReader("Mesonet.txt"));
 		
 		//Skip first three lines
-		for(int i = 1; i <= 3; i++) {
+		for(int i = 0; i < 3; i++) {
 			br.readLine();
 		}
-		String fileLine = br.readLine();
+		fileLine = br.readLine();
 		while(fileLine != null) {
-			
+			parse = (String) fileLine.subSequence(1,5);
+			file.add(parse);
+			fileLine = br.readLine();
 		}
+		br.close();
 	}
 	//Find the index of the station
 	public int indexOfStation() {
@@ -51,5 +55,8 @@ public class PosAvg {
 		String city3 = file.get(indexOfStation() + 2);
 		
 		return city;//stub
+	}
+	public ArrayList<String> getFile() {
+		return file;
 	}
 }
