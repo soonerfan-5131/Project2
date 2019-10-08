@@ -14,17 +14,22 @@ public class LetterAvg {
 		this.avgLetter = avgLetter;
 	}
 	//read method
-	public void readFile() throws IOException {
-		
+	public void readFile(String fileName) throws IOException {
+		String fileLine;
+		String parse = "";
 		BufferedReader br = new BufferedReader(new FileReader("Mesonet.txt"));
 		
-		for(int i = 1; i <= 3; i++) {
+		//Skip first three lines
+		for(int i = 0; i < 3; i++) {
 			br.readLine();
 		}
-		String fileLine = br.readLine();
+		fileLine = br.readLine();
 		while(fileLine != null) {
-			
+			parse = (String) fileLine.subSequence(1,5);
+			file.add(parse);
+			fileLine = br.readLine();
 		}
+		br.close();
 	}
 	//number of stations with letter average method
 	public int numberOfStationWithLetterAvg() {
