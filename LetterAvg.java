@@ -36,10 +36,16 @@ public class LetterAvg {
 	}
 	//number of stations with letter average method
 	public int numberOfStationWithLetterAvg() {
+		//Dont know how to do this
 		return 0;//stub
 	}
 	//toString method
 	public String toString() {
-		return null;//stub
+		String stat1 = file.get(numberOfStationWithLetterAvg());
+		String stat2 = file.get(numberOfStationWithLetterAvg());
+		String stat3 = file.get(numberOfStationWithLetterAvg());
+		String stat4 = file.get(numberOfStationWithLetterAvg());
+		//Dont know how to do this either
+		return String.format("They are:/n" + "%s/n" + "%s/n" + "%s/n" + "%s", stat1, stat2, stat3, stat4);//stub
 	}
 }

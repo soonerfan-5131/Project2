@@ -42,12 +42,14 @@ public class PosAvg {
 			temp = file.get(i);
 			if(str.equals(temp)) {
 				statIndex = file.indexOf(temp);
+				return statIndex;
 			}
 		}
 		return statIndex;
 	}
 	//toString method.  Finish later
 	public String toString() {
+		//Help with error on line below
 		String city = file.get(indexOfStation() + 1);
 		
 		String city2 = file.get(indexOfStation() - 1);
