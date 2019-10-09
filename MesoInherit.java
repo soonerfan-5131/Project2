@@ -8,6 +8,7 @@ public class MesoInherit extends MesoAbstract{
 	private char thirdLetter;
 	private char lastLetter;
 	private String statName;
+	private int sum;
 	//Default constructor
 	public MesoInherit() {
 		
@@ -18,6 +19,7 @@ public class MesoInherit extends MesoAbstract{
 	}
 	public int[] calAverage() {
 		//Help with this
+		int[] temp = new int[4];
 		lettersAvg = new int[4];
 		statName = statID.getStID();
 		char[] letters = new char[4];
@@ -27,13 +29,18 @@ public class MesoInherit extends MesoAbstract{
 		thirdLetter = letters[2];
 		lastLetter = letters[3];
 		int a = firstLetter;
-		a = lettersAvg[0];
+		a = temp[0];
 		int b = secondLetter;
-		b = lettersAvg[1];
+		b = temp[1];
 		int c = thirdLetter;
-		c = lettersAvg[2];
+		c = temp[2];
 		int d = lastLetter;
-		d = lettersAvg[3];
+		d = temp[3];
+		for(int i = 0; i < temp.length; i++) {
+			sum += temp[i];
+		}
+		int avg = sum/4;
+		avg = lettersAvg[0];
 		return lettersAvg;
 	}
 	public char letterAverage() {

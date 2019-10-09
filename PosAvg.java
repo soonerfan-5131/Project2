@@ -27,6 +27,9 @@ public class PosAvg {
 		for(int i = 0; i < 3; i++) {
 			br.readLine();
 		}
+		//fileLine = br.readLine();
+		//fileLine = br.readLine();
+		//fileLine = br.readLine();
 		fileLine = br.readLine();
 		while(fileLine != null) {
 			parse = (String) fileLine.subSequence(1,5);
