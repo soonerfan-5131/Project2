@@ -7,8 +7,11 @@ import java.util.ArrayList;
 public class LetterAvg {
 	ArrayList<String> file = new ArrayList<String>();
 	PosAvg p = new PosAvg();
+	MesoInherit meso = new MesoInherit();
 	private char avgLetter;
+	private char a;
 	private String fileLine;
+	private ArrayList<String> letter = new ArrayList<String>();
 	//Default constructor
 	public LetterAvg() {
 		
@@ -37,16 +40,17 @@ public class LetterAvg {
 	}
 	//number of stations with letter average method
 	public int numberOfStationWithLetterAvg() {
+		PosAvg p = new PosAvg();
 		//Dont know how to do this
-		return 0;//stub
+		int counter = 0;
+		ArrayList<String> temp = p.getFile();
+		
+		return counter;
 	}
 	//toString method
 	public String toString() {
-		String stat1 = file.get(numberOfStationWithLetterAvg());
-		String stat2 = file.get(numberOfStationWithLetterAvg());
-		String stat3 = file.get(numberOfStationWithLetterAvg());
-		String stat4 = file.get(numberOfStationWithLetterAvg());
-		//Dont know how to do this either
-		return String.format("They are:/n" + "%s/n" + "%s/n" + "%s/n" + "%s", stat1, stat2, stat3, stat4);//stub
+		String str = "\nThey are:";
+		str = str + "\n" + letter;
+		return str;
 	}
 }
