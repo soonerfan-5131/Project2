@@ -8,17 +8,18 @@ public class LetterAvg {
 	ArrayList<String> file = new ArrayList<String>();
 	PosAvg p = new PosAvg();
 	private char avgLetter;
+	private String fileLine;
 	//Default constructor
 	public LetterAvg() {
 		
 	}
 	//LetterAvg constructor
-	public LetterAvg(char avgLetter) {
+	public LetterAvg(char avgLetter) throws IOException {
+		readFile(fileLine);
 		this.avgLetter = avgLetter;
 	}
 	//read method
 	public void readFile(String fileName) throws IOException {
-		String fileLine;
 		String parse = "";
 		BufferedReader br = new BufferedReader(new FileReader("Mesonet.txt"));
 		file = p.getFile();

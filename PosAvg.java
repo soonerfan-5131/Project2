@@ -1,7 +1,9 @@
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -14,7 +16,8 @@ public class PosAvg {
 		
 	}
 	//PosAvg constructor
-	public PosAvg(String str) {
+	public PosAvg(String str) throws IOException{
+		readFile("Mesonet.txt");
 		this.str = str;
 	}
 	//Read method to read in Mesonet.txt
@@ -38,11 +41,17 @@ public class PosAvg {
 		}
 		br.close();
 	}
+	public void showArray() {
+		for(int i = 0; i < file.size(); i++) {
+			System.out.println(file.get(i));
+		}
+	}
 	//Find the index of the station
 	public int indexOfStation() {
 		int statIndex = 0;
 		for(int i = 0; i < file.size(); i++) {
 			temp = file.get(i);
+			//System.out.println(temp);
 			if(str.equals(temp)) {
 				statIndex = file.indexOf(temp);
 				return statIndex;
@@ -61,7 +70,7 @@ public class PosAvg {
 		
 		String city4 = file.get(indexOfStation() - 2);
 		
-		return String.format("This index is average of %s and %s, %s and %s, and so on.", city, city2, city3, city4);
+		return String.format("This index is average of %s and %s, %s and %s, and so on.", city2, city, city4, city3);
 	}
 	public ArrayList<String> getFile() {
 		return file;
