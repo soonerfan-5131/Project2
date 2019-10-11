@@ -8,6 +8,7 @@ public class LetterAvg {
 	ArrayList<String> file = new ArrayList<String>();
 	PosAvg p = new PosAvg();
 	MesoInherit meso = new MesoInherit();
+	private String myStat;
 	private char avgLetter;
 	private char a;
 	private String fileLine;
@@ -44,7 +45,19 @@ public class LetterAvg {
 		//Dont know how to do this
 		int counter = 0;
 		ArrayList<String> temp = p.getFile();
-		
+		for(int i = 0;  i < temp.size(); i++) {
+			String myStat = temp.get(i);
+			a = myStat.charAt(0);
+			avgLetter = meso.letterAverage();
+			if(avgLetter == a) {
+				letter.add(myStat);
+				counter++;
+				return counter;
+			}
+			else {
+				return counter;
+			}
+		}
 		return counter;
 	}
 	//toString method
