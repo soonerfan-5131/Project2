@@ -54,6 +54,8 @@ public class PosAvg {
 			//System.out.println(temp);
 			if(str.equals(temp)) {
 				statIndex = file.indexOf(temp);
+				//new code below
+				statIndex++;
 				return statIndex;
 			}
 		}
@@ -62,13 +64,13 @@ public class PosAvg {
 	//toString method.  Finish later
 	public String toString() {
 		//Help with error on line below
-		String city = file.get(indexOfStation() + 1);
+		String city = file.get(indexOfStation());
 		
-		String city2 = file.get(indexOfStation() - 1);
+		String city2 = file.get(indexOfStation() - 2);
 		
-		String city3 = file.get(indexOfStation() + 2);
+		String city3 = file.get(indexOfStation() + 1);
 		
-		String city4 = file.get(indexOfStation() - 2);
+		String city4 = file.get(indexOfStation() - 3);
 		
 		return String.format("This index is average of %s and %s, %s and %s, and so on.", city2, city, city4, city3);
 	}
