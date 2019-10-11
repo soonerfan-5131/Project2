@@ -32,7 +32,7 @@ public class MesoInherit extends MesoAbstract{
 		charAvg = (num + num2 + num3 + num4)/4.0;
 		ceiling = Math.ceil(charAvg);
 		floor = Math.floor(charAvg);
-		avg = Math.rint(charAvg);
+		avg = Math.round(charAvg);
 		lettersAvg[0] = (int)ceiling;
 		lettersAvg[1] = (int)floor;
 		lettersAvg[2] = (int)avg;
