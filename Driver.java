@@ -10,7 +10,7 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		String stID = "NRMN";
-		PosAvg p = new PosAvg(stID);
+		//PosAvg p = new PosAvg(stID);
 		//p.indexOfStation();
 		//p.showArray();
 		//p.readFile("Mesonet.txt");

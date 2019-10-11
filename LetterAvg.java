@@ -10,7 +10,7 @@ public class LetterAvg {
 	MesoInherit meso = new MesoInherit();
 	private String myStat;
 	private char avgLetter;
-	private char a;
+	private char myChar;
 	private String fileLine;
 	private ArrayList<String> letter = new ArrayList<String>();
 	//Default constructor
@@ -41,21 +41,17 @@ public class LetterAvg {
 	}
 	//number of stations with letter average method
 	public int numberOfStationWithLetterAvg() {
-		PosAvg p = new PosAvg();
 		//Dont know how to do this
+		MesoInherit meso = new MesoInherit();
 		int counter = 0;
 		ArrayList<String> temp = p.getFile();
 		for(int i = 0;  i < temp.size(); i++) {
 			String myStat = temp.get(i);
-			a = myStat.charAt(0);
-			avgLetter = meso.letterAverage();
-			if(avgLetter == a) {
+			char myChar = myStat.charAt(0);
+			char avgLetter = meso.getAvgLetter();
+			if(avgLetter == myChar) {
 				letter.add(myStat);
 				counter++;
-				return counter;
-			}
-			else {
-				return counter;
 			}
 		}
 		return counter;

@@ -1,14 +1,10 @@
 
 
 public class MesoInherit extends MesoAbstract{
-	MesoStation statID = new MesoStation("OKCE");
+	MesoStation statID = new MesoStation("NRMN");
 	private int[] lettersAvg;
-	private char firstLetter;
-	private char secondLetter;
-	private char thirdLetter;
-	private char lastLetter;
 	private String statName;
-	private int sum;
+	private char averageLetter;
 	//Default constructor
 	public MesoInherit() {
 		
@@ -43,6 +39,10 @@ public class MesoInherit extends MesoAbstract{
 		return lettersAvg;
 	}
 	public char letterAverage() {
-		return (char)calAverage()[2];
+		averageLetter = (char)calAverage()[2];
+		return averageLetter;
+	}
+	public char getAvgLetter() {
+		return averageLetter;
 	}
 }
